@@ -35,7 +35,7 @@
 				</div>
 				<div class="panel-body">
 					<div class="row">
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							<div class="form-group">
 								<label>Nav Background Color</label>
 								<div class="colorpick input-group colorpicker-component">
@@ -44,7 +44,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							<div class="form-group">
 								<label>Nav Link</label>
 								<div class="colorpick input-group colorpicker-component">
@@ -53,7 +53,16 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-4">
+						<div class="col-sm-3">
+							<div class="form-group">
+								<label>Nav Link BG </label>
+								<div class="colorpick input-group colorpicker-component">
+								    <input type="text" value="" class="form-control" name="nav_link_bg" placeholder="Click Right" />
+								    <span class="input-group-addon"><i></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3">
 							<div class="form-group">
 								<label>Nav Link Hover</label>
 								<div class="colorpick input-group colorpicker-component">
@@ -62,7 +71,56 @@
 								</div>
 							</div>
 						</div>
+						<div class="col-sm-3">
+							<div class="form-group">
+								<label>Nav Link BG Hover</label>
+								<div class="colorpick input-group colorpicker-component">
+								    <input type="text" value="" class="form-control" name="nav_link_bghover" placeholder="Click Right" />
+								    <span class="input-group-addon"><i></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="form-group">
+								<label>Nav Link Active</label>
+								<div class="colorpick input-group colorpicker-component">
+								    <input type="text" value="" class="form-control" name="nav_linkactive" placeholder="Click Right" />
+								    <span class="input-group-addon"><i></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="form-group">
+								<label>Nav Link BG Active</label>
+								<div class="colorpick input-group colorpicker-component">
+								    <input type="text" value="" class="form-control" name="nav_linkactivebg" placeholder="Click Right" />
+								    <span class="input-group-addon"><i></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="form-group">
+								<label>Nav Brand Text</label>
+								<div class="colorpick input-group colorpicker-component">
+								    <input type="text" value="" class="form-control" name="nav_brandtxt" placeholder="Click Right" />
+								    <span class="input-group-addon"><i></i></span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3">
+							<div class="form-group">
+								<label>Nav Brand Text Hover</label>
+								<div class="colorpick input-group colorpicker-component">
+								    <input type="text" value="" class="form-control" name="nav_brandtxthov" placeholder="Click Right" />
+								    <span class="input-group-addon"><i></i></span>
+								</div>
+							</div>
+						</div>
+
 					</div>
+
+					<hr>
 					
 					<div class="checkbox-inline">
 						<label><input type="checkbox" value="true" checked="true" name="player_fixednav">Fixed Navigation</label>
@@ -84,7 +142,22 @@
 						<label for="sel1"><a href="https://bootswatch.com/" target="_blank">Bootwatch</a> Theme:</label>
 						<select class="form-control" name="player_theme">
 							<option>default</option>
+							<option>cerulean</option>
+							<option>cosmo</option>
+							<option>cyborg</option>
 							<option>darkly</option>
+							<option>flatly</option>
+							<option>journal</option>
+							<option>lumen</option>
+							<option>readable</option>
+							<option>sandstone</option>
+							<option>simplex</option>
+							<option>slate</option>
+							<option>solar</option>
+							<option>spacelab</option>
+							<option>superhero</option>
+							<option>united</option>
+							<option>yeti</option>
 						</select>
 					</div>
 

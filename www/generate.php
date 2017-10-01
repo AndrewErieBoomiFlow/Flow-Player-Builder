@@ -104,23 +104,448 @@ $scriptOut =
 ";
 
 $customcss = "<style>". PHP_EOL;
+
+
+///////////////////////////
+// Nav Overides
+///////////////////////////
+
 $customcss .=
 "
-    .mw-bs .btn-default {
-        background: ".$_POST["btn_default_bg"].";
-        color: ".$_POST["btn_default_txt"].";
+    /****************/
+    /* Nav          */
+    /****************/
+    .mw-bs .navbar-default {
+        border-radius:0px;
+";
+
+if($_POST["nav_bg"]){
+    $customcss .= "        background: ".$_POST["nav_bg"].";";
+}
+
+$customcss .=
+"
     }
-     
-    .mw-bs .btn-default:hover, .mw-bs .btn-default:focus, .mw-bs .btn-default:active, .mw-bs .btn-default.active, .open > .dropdown-toggle.btn-default {
-        background: ".$_POST["btn_default_bghover"]."
+
+    .mw-bs .navbar-default .navbar-nav>li>a {
+";
+
+if($_POST["nav_link"]){
+    $customcss .= "        color: ".$_POST["nav_link"].";". PHP_EOL;
+}
+
+if($_POST["nav_link_bg"]){
+    $customcss .= "        background: ".$_POST["nav_link_bg"].";";
+}
+
+$customcss .=
+"
     }
-     
-    .mw-bs .btn-default:active, .mw-bs .btn-default.active {
-        background: #007299;
-        box-shadow: none;
+
+    .mw-bs .navbar-default .navbar-nav>li>a:focus, .mw-bs .navbar-default .navbar-nav>li>a:hover {
+";
+
+if($_POST["nav_link_hover"]){
+    $customcss .= "        color: ".$_POST["nav_link_hover"].";". PHP_EOL;
+}
+
+if($_POST["nav_link_bghover"]){
+    $customcss .= "        background: ".$_POST["nav_link_bghover"].";";
+}
+
+$customcss .=
+"
+    }
+
+    .mw-bs .navbar-default .navbar-brand {
+";
+
+if($_POST["nav_brandtxt"]){
+    $customcss .= "        color: ".$_POST["nav_brandtxt"].";";
+}
+
+$customcss .=
+"
+    }
+
+    .mw-bs .navbar-default .navbar-brand:focus, .mw-bs .navbar-default .navbar-brand:hover {
+";
+
+if($_POST["nav_brandtxthov"]){
+    $customcss .= "        color: ".$_POST["nav_brandtxthov"].";";
+}
+
+$customcss .=
+"
+    }
+
+    .mw-bs .navbar-default .navbar-nav>.active>a, .mw-bs .navbar-default .navbar-nav>.active>a:focus, .mw-bs .navbar-default .navbar-nav>.active>a:hover {
+";
+
+if($_POST["nav_linkactive"]){
+    $customcss .= "        color: ".$_POST["nav_linkactive"].";";
+}
+
+if($_POST["nav_linkactivebg"]){
+    $customcss .= "        background: ".$_POST["nav_linkactivebg"].";";
+}
+
+$customcss .=
+"
     }
 
 ";
+
+///////////////////////////
+// Theme Overides (btns)
+///////////////////////////
+
+
+//////////  btn-default  ////////////////
+
+$customcss .=
+"
+    /****************/
+    /* btn-default  */
+    /****************/
+    .mw-bs .btn-default {
+";
+
+if($_POST["btn_default_bg"]){
+    $customcss .= "        background: ".$_POST["btn_default_bg"].";". PHP_EOL;
+}
+
+if($_POST["btn_default_txt"]){
+    $customcss .= "        color: ".$_POST["btn_default_txt"].";";
+}
+
+if($_POST["btn_default_brdwidth"]){
+    $customcss .= "        border: ".$_POST["btn_default_brdwidth"]."px solid ";
+    if($_POST["btn_default_brdcolor"]){
+        $customcss .= $_POST["btn_default_brdcolor"];
+    }
+} else if($_POST["btn_default_brdcolor"]){
+    $customcss .= "        border: ".$_POST["btn_default_brdcolor"].";";
+}
+
+if($_POST["btn_default_brdrad"]){
+    $customcss .= "        border-radius: ".$_POST["btn_default_brdrad"].";";
+}
+
+$customcss .="  
+    }
+     
+    .mw-bs .btn-default:hover, .mw-bs .btn-default:focus, .mw-bs .btn-default:active, .mw-bs .btn-default.active, .open > .dropdown-toggle.btn-default {
+";
+
+if($_POST["btn_default_bghover"]){
+    $customcss .= "        background: ".$_POST["btn_default_bghover"].";";
+}
+
+ $customcss .= "
+    }
+     
+    .mw-bs .btn-default:active, .mw-bs .btn-default.active {
+";
+
+if($_POST["btn_default_bg"]){
+    $customcss .= "        background: ".adjustBrightness($_POST["btn_default_bg"], -50).";";
+}
+
+$customcss .= "       
+        box-shadow: none;
+    }
+";
+
+
+//////////  btn-primary  ////////////////
+
+$customcss .=
+"
+    /****************/
+    /* btn-primary  */
+    /****************/
+    .mw-bs .btn-primary {
+";
+
+if($_POST["btn_primary_bg"]){
+    $customcss .= "        background: ".$_POST["btn_primary_bg"].";". PHP_EOL;
+}
+
+if($_POST["btn_primary_txt"]){
+    $customcss .= "        color: ".$_POST["btn_primary_txt"].";";
+}
+
+if($_POST["btn_primary_brdwidth"]){
+    $customcss .= "        border: ".$_POST["btn_primary_brdwidth"]."px solid ";
+    if($_POST["btn_primary_brdcolor"]){
+        $customcss .= $_POST["btn_primary_brdcolor"];
+    }
+} else if($_POST["btn_primary_brdcolor"]){
+    $customcss .= "        border: ".$_POST["btn_primary_brdcolor"].";";
+}
+
+if($_POST["btn_primary_brdrad"]){
+    $customcss .= "        border-radius: ".$_POST["btn_primary_brdrad"].";";
+}
+
+$customcss .="  
+    }
+     
+    .mw-bs .btn-primary:hover, .mw-bs .btn-primary:focus, .mw-bs .btn-primary:active, .mw-bs .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+";
+
+if($_POST["btn_primary_bghover"]){
+    $customcss .= "        background: ".$_POST["btn_primary_bghover"].";";
+}
+
+ $customcss .= "
+    }
+     
+    .mw-bs .btn-primary:active, .mw-bs .btn-primary.active {
+";
+
+if($_POST["btn_primary_bg"]){
+    $customcss .= "        background: ".adjustBrightness($_POST["btn_primary_bg"], -50).";";
+}
+
+$customcss .= "       
+        box-shadow: none;
+    }
+";
+
+
+
+//////////  btn-success  ////////////////
+
+$customcss .=
+"
+    /****************/
+    /* btn-success  */
+    /****************/
+    .mw-bs .btn-success {
+";
+
+if($_POST["btn_success_bg"]){
+    $customcss .= "        background: ".$_POST["btn_success_bg"].";". PHP_EOL;
+}
+
+if($_POST["btn_success_txt"]){
+    $customcss .= "        color: ".$_POST["btn_success_txt"].";";
+}
+
+if($_POST["btn_success_brdwidth"]){
+    $customcss .= "        border: ".$_POST["btn_success_brdwidth"]."px solid ";
+    if($_POST["btn_success_brdcolor"]){
+        $customcss .= $_POST["btn_success_brdcolor"];
+    }
+} else if($_POST["btn_success_brdcolor"]){
+    $customcss .= "        border: ".$_POST["btn_success_brdcolor"].";";
+}
+
+if($_POST["btn_success_brdrad"]){
+    $customcss .= "        border-radius: ".$_POST["btn_success_brdrad"].";";
+}
+
+$customcss .="  
+    }
+     
+    .mw-bs .btn-success:hover, .mw-bs .btn-success:focus, .mw-bs .btn-success:active, .mw-bs .btn-success.active, .open > .dropdown-toggle.btn-success {
+";
+
+if($_POST["btn_success_bghover"]){
+    $customcss .= "        background: ".$_POST["btn_success_bghover"].";";
+}
+
+ $customcss .= "
+    }
+     
+    .mw-bs .btn-success:active, .mw-bs .btn-success.active {
+";
+
+if($_POST["btn_success_bg"]){
+    $customcss .= "        background: ".adjustBrightness($_POST["btn_success_bg"], -50).";";
+}
+
+$customcss .= "       
+        box-shadow: none;
+    }
+";
+
+
+//////////  btn-info  ////////////////
+
+$customcss .=
+"
+    /****************/
+    /* btn-info  */
+    /****************/
+    .mw-bs .btn-info {
+";
+
+if($_POST["btn_info_bg"]){
+    $customcss .= "        background: ".$_POST["btn_info_bg"].";". PHP_EOL;
+}
+
+if($_POST["btn_info_txt"]){
+    $customcss .= "        color: ".$_POST["btn_info_txt"].";";
+}
+
+if($_POST["btn_info_brdwidth"]){
+    $customcss .= "        border: ".$_POST["btn_info_brdwidth"]."px solid ";
+    if($_POST["btn_info_brdcolor"]){
+        $customcss .= $_POST["btn_info_brdcolor"];
+    }
+} else if($_POST["btn_info_brdcolor"]){
+    $customcss .= "        border: ".$_POST["btn_info_brdcolor"].";";
+}
+
+if($_POST["btn_info_brdrad"]){
+    $customcss .= "        border-radius: ".$_POST["btn_info_brdrad"].";";
+}
+
+$customcss .="  
+    }
+     
+    .mw-bs .btn-info:hover, .mw-bs .btn-info:focus, .mw-bs .btn-info:active, .mw-bs .btn-info.active, .open > .dropdown-toggle.btn-info {
+";
+
+if($_POST["btn_info_bghover"]){
+    $customcss .= "        background: ".$_POST["btn_info_bghover"].";";
+}
+
+ $customcss .= "
+    }
+     
+    .mw-bs .btn-info:active, .mw-bs .btn-info.active {
+";
+
+if($_POST["btn_info_bg"]){
+    $customcss .= "        background: ".adjustBrightness($_POST["btn_info_bg"], -50).";";
+}
+
+$customcss .= "       
+        box-shadow: none;
+    }
+";
+
+
+//////////  btn-warning  ////////////////
+
+$customcss .=
+"
+    /****************/
+    /* btn-warning  */
+    /****************/
+    .mw-bs .btn-warning {
+";
+
+if($_POST["btn_warning_bg"]){
+    $customcss .= "        background: ".$_POST["btn_warning_bg"].";". PHP_EOL;
+}
+
+if($_POST["btn_warning_txt"]){
+    $customcss .= "        color: ".$_POST["btn_warning_txt"].";";
+}
+
+if($_POST["btn_warning_brdwidth"]){
+    $customcss .= "        border: ".$_POST["btn_warning_brdwidth"]."px solid ";
+    if($_POST["btn_warning_brdcolor"]){
+        $customcss .= $_POST["btn_warning_brdcolor"];
+    }
+} else if($_POST["btn_warning_brdcolor"]){
+    $customcss .= "        border: ".$_POST["btn_warning_brdcolor"].";";
+}
+
+if($_POST["btn_warning_brdrad"]){
+    $customcss .= "        border-radius: ".$_POST["btn_warning_brdrad"].";";
+}
+
+$customcss .="  
+    }
+     
+    .mw-bs .btn-warning:hover, .mw-bs .btn-warning:focus, .mw-bs .btn-warning:active, .mw-bs .btn-warning.active, .open > .dropdown-toggle.btn-warning {
+";
+
+if($_POST["btn_warning_bghover"]){
+    $customcss .= "        background: ".$_POST["btn_warning_bghover"].";";
+}
+
+ $customcss .= "
+    }
+     
+    .mw-bs .btn-warning:active, .mw-bs .btn-warning.active {
+";
+
+if($_POST["btn_warning_bg"]){
+    $customcss .= "        background: ".adjustBrightness($_POST["btn_warning_bg"], -50).";";
+}
+
+$customcss .= "       
+        box-shadow: none;
+    }
+";
+
+
+//////////  btn-danger  ////////////////
+
+$customcss .=
+"
+    /****************/
+    /* btn-danger  */
+    /****************/
+    .mw-bs .btn-danger {
+";
+
+if($_POST["btn_danger_bg"]){
+    $customcss .= "        background: ".$_POST["btn_danger_bg"].";". PHP_EOL;
+}
+
+if($_POST["btn_danger_txt"]){
+    $customcss .= "        color: ".$_POST["btn_danger_txt"].";";
+}
+
+if($_POST["btn_danger_brdwidth"]){
+    $customcss .= "        border: ".$_POST["btn_danger_brdwidth"]."px solid ";
+    if($_POST["btn_danger_brdcolor"]){
+        $customcss .= $_POST["btn_danger_brdcolor"];
+    }
+} else if($_POST["btn_danger_brdcolor"]){
+    $customcss .= "        border: ".$_POST["btn_danger_brdcolor"].";";
+}
+
+if($_POST["btn_danger_brdrad"]){
+    $customcss .= "        border-radius: ".$_POST["btn_danger_brdrad"].";";
+}
+
+$customcss .="  
+    }
+     
+    .mw-bs .btn-danger:hover, .mw-bs .btn-danger:focus, .mw-bs .btn-danger:active, .mw-bs .btn-danger.active, .open > .dropdown-toggle.btn-danger {
+";
+
+if($_POST["btn_danger_bghover"]){
+    $customcss .= "        background: ".$_POST["btn_danger_bghover"].";";
+}
+
+ $customcss .= "
+    }
+     
+    .mw-bs .btn-danger:active, .mw-bs .btn-danger.active {
+";
+
+if($_POST["btn_danger_bg"]){
+    $customcss .= "        background: ".adjustBrightness($_POST["btn_danger_bg"], -50).";";
+}
+
+$customcss .= "       
+        box-shadow: none;
+    }
+";
+
+// End Button Themes
+///////////////////////////
+
 
 $customcss .= "</style>". PHP_EOL;
 ?>
@@ -133,6 +558,7 @@ $customcss .= "</style>". PHP_EOL;
 	$jquery = '<script src="https://assets.manywho.com/js/vendor/jquery-2.1.4.min.js"></script>';
 	$mainloader = '<script src="https://assets.manywho.com/js/loader.min.js"></script>';
 	$customcssfile = $_POST["player_customcssfile"];
+    $custompastecss = $_POST["player_pastecss"];
 
 	$playerOut = "";
 	$playerOut .= file_get_contents($p_open);
@@ -143,8 +569,16 @@ $customcss .= "</style>". PHP_EOL;
 	$playerOut .= $scriptOut;
 	$playerOut .= $customStyles;
 	$playerOut .= $mainloader. PHP_EOL;
-
     $playerOut .= $customcss. PHP_EOL;
+
+    //Paste CSS
+    if($custompastecss){
+        $playerOut .= "<style>". PHP_EOL;
+        $playerOut .= $custompastecss;
+        $playerOut .= "</style>". PHP_EOL;
+    }
+
+    //CSS URL (CDN)
 	if($customcssfile){
 		$playerOut .= '<link rel="stylesheet" href="'.$customcssfile.'">';
 	}
