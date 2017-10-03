@@ -1,4 +1,4 @@
-	<!-- Latest compiled and minified CSS -->
+	<!-- Bootstrap 3 -->
 	<link rel="stylesheet" href="theme/css/bootstrap.min.css">
 	<link rel="stylesheet" href="theme/css/bootstrap-colorpicker.min.css">
 

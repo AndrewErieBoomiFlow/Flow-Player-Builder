@@ -94,3 +94,24 @@ label {
 .colorpick{
     margin-bottom:15px;
 }
+
+.custom-col1{
+    margin-bottom:15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.pos-tr{
+    position: absolute;
+    top:5px;
+    right:5px;
+    z-index: 50;
+}
+
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: bold;
+    color: #515a8a;
+}

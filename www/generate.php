@@ -1,7 +1,7 @@
 <?php 
 /*
     Author : Andrew Erie (andrew_erie@dell.com)
-    for    : Dell Boomi
+    For    : Dell Boomi
 */
 ?>
 
@@ -111,6 +111,91 @@ $scriptOut =
 ";
 
 $customcss = "<style>". PHP_EOL;
+
+
+
+
+///////////////////////////
+// General Overides
+///////////////////////////
+$customcss .=
+"
+    /****************/
+    /* General      */
+    /****************/
+    .mw-bs{
+";
+
+if($_POST["general_bg"]){
+    $customcss .= "        background: ".$_POST["general_bg"].";";
+}
+
+if($_POST["general_text"]){
+    $customcss .= " background: ".$_POST["general_text"].";";
+}
+
+if($_POST["general_fontsize"]){
+    $customcss .= " background: ".$_POST["general_fontsize"].";";
+}
+
+$customcss .=
+"
+    }
+";
+
+//links
+
+if($_POST["general_link"]){
+    $customcss .="    .mw-bs a{";
+    $customcss .= "color: ".$_POST["general_link"].";";
+    $customcss .= "}". PHP_EOL;
+}
+
+if($_POST["general_linkhover"]){
+    $customcss .="    .mw-bs a:hover{";
+    $customcss .= "color: ".$_POST["general_linkhover"].";";
+    $customcss .= "}". PHP_EOL;
+}
+
+if($_POST["general_activelink"]){
+    $customcss .="    .mw-bs a:active{";
+    $customcss .= "color: ".$_POST["general_activelink"].";";
+    $customcss .= "}". PHP_EOL;
+}
+
+
+//Headers
+
+if($_POST["general_h1size"]){
+    $customcss .="    .mw-bs .h1, .mw-bs h1 {";
+    $customcss .= "font-size: ".$_POST["general_h1size"].";";
+    $customcss .= "}". PHP_EOL;
+}
+
+if($_POST["general_h2size"]){
+    $customcss .="    .mw-bs .h2, .mw-bs h2 {";
+    $customcss .= "font-size: ".$_POST["general_h2size"].";";
+    $customcss .= "}". PHP_EOL;
+}
+
+if($_POST["general_h3size"]){
+    $customcss .="    .mw-bs .h3, .mw-bs h3 {";
+    $customcss .= "font-size: ".$_POST["general_h3size"].";";
+    $customcss .= "}". PHP_EOL;
+}
+
+if($_POST["general_h4size"]){
+    $customcss .="    .mw-bs .h4, .mw-bs h4 {";
+    $customcss .= "font-size: ".$_POST["general_h4size"].";";
+    $customcss .= "}". PHP_EOL;
+}
+
+if($_POST["general_h5size"]){
+    $customcss .="    .mw-bs .h5, .mw-bs h5 {";
+    $customcss .= "font-size: ".$_POST["general_h5size"].";";
+    $customcss .= "}". PHP_EOL;
+}
+
 
 
 ///////////////////////////
@@ -552,7 +637,6 @@ $customcss .= "
 
 // End Button Themes
 ///////////////////////////
-
 
 $customcss .= "</style>". PHP_EOL;
 ?>

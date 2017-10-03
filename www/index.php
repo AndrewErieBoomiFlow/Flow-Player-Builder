@@ -1,7 +1,7 @@
 <?php 
 /*
 	Author : Andrew Erie (andrew_erie@dell.com)
-	for    : Dell Boomi
+	For    : Dell Boomi
 */
 ?>
 
@@ -22,16 +22,210 @@
 						<label for="player_title">Title</label>
 						<input type="text" class="form-control" id="player_title" placeholder="" name="player_title">
 					</div>
-
 					<div class="form-group" >
 						<label for="player_favicon">Fav Icon URL</label>
 						<input type="text" class="form-control" id="player_favicon" placeholder="" name="player_favicon">
-					</div>
-						
+					</div>						
 					<div class="form-group checkbox-inline">
-						<label><input type="checkbox" value="true" checked="true" name="player_replaceurl">Replace URL</label>
+						<label><input data-toggle="toggle" type="checkbox" value="true" checked="true" name="player_replaceurl">Replace URL</label>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Theme  -->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Bootwatch Theme / Custom CSS</h3>
+				</div>
+				<div class="panel-body">
+					
+					<div class="form-group">
+						<label for="sel1"><a href="https://bootswatch.com/" target="_blank">Bootwatch</a> Theme:</label>
+						<select class="form-control" name="player_theme">
+							<option>default</option>
+							<option>cerulean</option>
+							<option>cosmo</option>
+							<option>cyborg</option>
+							<option>darkly</option>
+							<option>flatly</option>
+							<option>journal</option>
+							<option>lumen</option>
+							<option>readable</option>
+							<option>sandstone</option>
+							<option>simplex</option>
+							<option>slate</option>
+							<option>solar</option>
+							<option>spacelab</option>
+							<option>superhero</option>
+							<option>united</option>
+							<option>yeti</option>
+						</select>
 					</div>
 
+					<div class="form-group" >
+						<label for="player_customcssfile">Custom CSS URL</label>
+						<input type="text" class="form-control" id="player_customcssfile" placeholder="" name="player_customcssfile">
+					</div>
+
+					<div class="form-group">
+						<label for="pastecss">Paste CSS</label>
+						<textarea class="form-control" rows="5" id="pastecss" name="player_pastecss"></textarea>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Nav -->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">General Colors</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						
+						<div class="col-sm-3">
+							<div class="form-group">
+								<label>Background Color</label>
+								<div class="colorpick input-group colorpicker-component">
+								    <input type="text" value="" class="form-control" name="general_bg" placeholder="Click Right" />
+								    <span class="input-group-addon"><i></i></span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3">
+							<div class="form-group">
+								<label>Text Color</label>
+								<div class="colorpick input-group colorpicker-component">
+								    <input type="text" value="" class="form-control" name="general_text" placeholder="Click Right" />
+								    <span class="input-group-addon"><i></i></span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3">
+							<div class="form-group">
+								<label>Base Font Size</label>
+								<select class="form-control" name="general_fontsize">
+									<option></option>
+									<?php 
+										for ($x = 8; $x <= 22; $x++) {
+										    echo "<option>".$x."px </option>";
+										} 
+									?>								
+								</select>
+							</div>
+						</div>
+
+					</div>
+					<div class="row">
+
+						<div class="col-sm-3">
+							<div class="form-group">
+								<label>Link Color</label>
+								<div class="colorpick input-group colorpicker-component">
+								    <input type="text" value="" class="form-control" name="general_link" placeholder="Click Right" />
+								    <span class="input-group-addon"><i></i></span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3">
+							<div class="form-group">
+								<label>Link Hover Color</label>
+								<div class="colorpick input-group colorpicker-component">
+								    <input type="text" value="" class="form-control" name="general_linkhover" placeholder="Click Right" />
+								    <span class="input-group-addon"><i></i></span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3">
+							<div class="form-group">
+								<label>Link Active Color</label>
+								<div class="colorpick input-group colorpicker-component">
+								    <input type="text" value="" class="form-control" name="general_activelink" placeholder="Click Right" />
+								    <span class="input-group-addon"><i></i></span>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<hr>
+					<div class="row">
+
+						<div class="col-sm-2">
+							<div class="form-group">
+								<label>h1 Font Size</label>
+								<select class="form-control" name="general_h1size">
+									<option></option>
+									<?php 
+										for ($x = 12; $x <= 72; $x++) {
+										    echo "<option>".$x."px </option>";
+										} 
+									?>								
+								</select>
+							</div>
+						</div>
+
+						<div class="col-sm-2">
+							<div class="form-group">
+								<label>h2 Font Size</label>
+								<select class="form-control" name="general_h2size">
+									<option></option>
+									<?php 
+										for ($x = 12; $x <= 72; $x++) {
+										    echo "<option>".$x."px </option>";
+										} 
+									?>								
+								</select>
+							</div>
+						</div>
+
+						<div class="col-sm-2">
+							<div class="form-group">
+								<label>h3 Font Size</label>
+								<select class="form-control" name="general_h3size">
+									<option></option>
+									<?php 
+										for ($x = 12; $x <= 72; $x++) {
+										    echo "<option>".$x."px </option>";
+										} 
+									?>								
+								</select>
+							</div>
+						</div>
+
+						<div class="col-sm-2">
+							<div class="form-group">
+								<label>h4 Font Size</label>
+								<select class="form-control" name="general_h4size">
+									<option></option>
+									<?php 
+										for ($x = 12; $x <= 72; $x++) {
+										    echo "<option>".$x."px </option>";
+										} 
+									?>								
+								</select>
+							</div>
+						</div>
+
+						<div class="col-sm-2">
+							<div class="form-group">
+								<label>h5 Font Size</label>
+								<select class="form-control" name="general_h5size">
+									<option></option>
+									<?php 
+										for ($x = 12; $x <= 72; $x++) {
+										    echo "<option>".$x."px </option>";
+										} 
+									?>								
+								</select>
+							</div>
+						</div>
+
+					</div>
 				</div>
 			</div>
 
@@ -130,65 +324,22 @@
 					<hr>
 					
 					<div class="checkbox-inline">
-						<label><input type="checkbox" value="true" checked="true" name="player_fixednav">Fixed Navigation</label>
+						<label><input data-toggle="toggle" type="checkbox" value="true"  checked="true" name="player_fixednav">Fixed Navigation</label>
 					</div>
 					<div class="checkbox-inline">
-						<label><input type="checkbox" value="true" name="player_iswizard">Is Wizard?</label>
+						<label><input data-toggle="toggle" type="checkbox" value="true" name="player_iswizard">Is Wizard?</label>
 					</div>
-				</div>
-			</div>
-
-			<!-- Theme  -->
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">Bootwatch Theme / Custom CSS</h3>
-				</div>
-				<div class="panel-body">
-					
-					<div class="form-group">
-						<label for="sel1"><a href="https://bootswatch.com/" target="_blank">Bootwatch</a> Theme:</label>
-						<select class="form-control" name="player_theme">
-							<option>default</option>
-							<option>cerulean</option>
-							<option>cosmo</option>
-							<option>cyborg</option>
-							<option>darkly</option>
-							<option>flatly</option>
-							<option>journal</option>
-							<option>lumen</option>
-							<option>readable</option>
-							<option>sandstone</option>
-							<option>simplex</option>
-							<option>slate</option>
-							<option>solar</option>
-							<option>spacelab</option>
-							<option>superhero</option>
-							<option>united</option>
-							<option>yeti</option>
-						</select>
-					</div>
-
-					<div class="form-group" >
-						<label for="player_customcssfile">Custom CSS URL</label>
-						<input type="text" class="form-control" id="player_customcssfile" placeholder="" name="player_customcssfile">
-					</div>
-
-					<div class="form-group">
-						<label for="pastecss">Paste CSS:</label>
-						<textarea class="form-control" rows="5" id="pastecss" name="player_pastecss"></textarea>
-					</div>
-
 				</div>
 			</div>
 
 			<!-- Quick Colors  -->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Quick Colors / Brand</h3>
+					<h3 class="panel-title">Button Colors</h3>
 				</div>
 				<div class="panel-body">
 					<div class="row">
-						<div class="col-md-2 col-sm-4">
+						<div class="col-md-4 col-sm-4 custom-col1">
 							<label>Default Btn Bg</label>
 							<div class="colorpick input-group colorpicker-component">
 							    <input type="text" value="" class="form-control" name="btn_default_bg" placeholder="Click Right" />
@@ -240,7 +391,7 @@
 							</div>
 						</div>
 
-						<div class="col-md-2 col-sm-4">
+						<div class="col-md-4 col-sm-4 custom-col1">
 							<label>Primary Btn Bg</label>
 							<div class="colorpick input-group colorpicker-component">
 							    <input type="text" value="" class="form-control" name="btn_primary_bg" placeholder="Click Right" />
@@ -292,7 +443,7 @@
 							</div>
 						</div>
 						
-						<div class="col-md-2 col-sm-4">
+						<div class="col-md-4 col-sm-4 custom-col1">
 							<label>Success Btn Bg</label>
 							<div class="colorpick input-group colorpicker-component">
 							    <input type="text" value="" class="form-control" name="btn_success_bg" placeholder="Click Right" />
@@ -344,7 +495,7 @@
 							</div>
 						</div>
 
-						<div class="col-md-2 col-sm-4">
+						<div class="col-md-4 col-sm-4 custom-col1">
 							<label>Info Btn Bg</label>
 							<div class="colorpick input-group colorpicker-component">
 							    <input type="text" value="" class="form-control" name="btn_info_bg" placeholder="Click Right" />
@@ -396,7 +547,7 @@
 							</div>
 						</div>
 
-						<div class="col-md-2 col-sm-4">
+						<div class="col-md-4 col-sm-4 custom-col1">
 							<label>Warning Btn Bg</label>
 							<div class="colorpick input-group colorpicker-component">
 							    <input type="text" value="" class="form-control" name="btn_warning_bg" placeholder="Click Right" />
@@ -448,7 +599,7 @@
 							</div>
 						</div>
 
-						<div class="col-md-2 col-sm-4">
+						<div class="col-md-4 col-sm-4 custom-col1">
 							<label>Danger Btn Bg</label>
 							<div class="colorpick input-group colorpicker-component">
 							    <input type="text" value="" class="form-control" name="btn_danger_bg" placeholder="Click Right" />
@@ -500,19 +651,18 @@
 							</div>
 						</div>
 
-
-
 					</div>
 				</div>
 			</div>
-
 		
 			<button type="submit" class="btn btn-primary">Generate</button>
 
 		</form>
 
-
 <?php include 'include/footer.php';?>
+
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
 <script>
 $(function() {
