@@ -312,7 +312,7 @@ if($_POST["btn_default_txt"]){
 }
 
 if($_POST["btn_default_brdwidth"]){
-    $customcss .= "        border: ".$_POST["btn_default_brdwidth"]."px solid ";
+    $customcss .= "        border: ".$_POST["btn_default_brdwidth"]." solid ";
     if($_POST["btn_default_brdcolor"]){
         $customcss .= $_POST["btn_default_brdcolor"];
     }
@@ -324,7 +324,7 @@ if($_POST["btn_default_brdrad"]){
     $customcss .= "        border-radius: ".$_POST["btn_default_brdrad"].";";
 }
 
-$customcss .="  
+$customcss .="
     }
      
     .mw-bs .btn-default:hover, .mw-bs .btn-default:focus, .mw-bs .btn-default:active, .mw-bs .btn-default.active, .open > .dropdown-toggle.btn-default {
@@ -332,6 +332,9 @@ $customcss .="
 
 if($_POST["btn_default_bghover"]){
     $customcss .= "        background: ".$_POST["btn_default_bghover"].";";
+}
+if($_POST["btn_default_txthover"]){
+    $customcss .= "        color: ".$_POST["btn_default_txthover"].";";
 }
 
  $customcss .= "
@@ -369,7 +372,7 @@ if($_POST["btn_primary_txt"]){
 }
 
 if($_POST["btn_primary_brdwidth"]){
-    $customcss .= "        border: ".$_POST["btn_primary_brdwidth"]."px solid ";
+    $customcss .= "        border: ".$_POST["btn_primary_brdwidth"]." solid ";
     if($_POST["btn_primary_brdcolor"]){
         $customcss .= $_POST["btn_primary_brdcolor"];
     }
@@ -390,6 +393,10 @@ $customcss .="
 if($_POST["btn_primary_bghover"]){
     $customcss .= "        background: ".$_POST["btn_primary_bghover"].";";
 }
+if($_POST["btn_primary_txthover"]){
+    $customcss .= "        color: ".$_POST["btn_primary_txthover"].";";
+}
+
 
  $customcss .= "
     }
@@ -427,7 +434,7 @@ if($_POST["btn_success_txt"]){
 }
 
 if($_POST["btn_success_brdwidth"]){
-    $customcss .= "        border: ".$_POST["btn_success_brdwidth"]."px solid ";
+    $customcss .= "        border: ".$_POST["btn_success_brdwidth"]." solid ";
     if($_POST["btn_success_brdcolor"]){
         $customcss .= $_POST["btn_success_brdcolor"];
     }
@@ -447,6 +454,9 @@ $customcss .="
 
 if($_POST["btn_success_bghover"]){
     $customcss .= "        background: ".$_POST["btn_success_bghover"].";";
+}
+if($_POST["btn_success_txthover"]){
+    $customcss .= "        color: ".$_POST["btn_success_txthover"].";";
 }
 
  $customcss .= "
@@ -484,7 +494,7 @@ if($_POST["btn_info_txt"]){
 }
 
 if($_POST["btn_info_brdwidth"]){
-    $customcss .= "        border: ".$_POST["btn_info_brdwidth"]."px solid ";
+    $customcss .= "        border: ".$_POST["btn_info_brdwidth"]." solid ";
     if($_POST["btn_info_brdcolor"]){
         $customcss .= $_POST["btn_info_brdcolor"];
     }
@@ -504,6 +514,9 @@ $customcss .="
 
 if($_POST["btn_info_bghover"]){
     $customcss .= "        background: ".$_POST["btn_info_bghover"].";";
+}
+if($_POST["btn_info_txthover"]){
+    $customcss .= "        color: ".$_POST["btn_info_txthover"].";";
 }
 
  $customcss .= "
@@ -541,7 +554,7 @@ if($_POST["btn_warning_txt"]){
 }
 
 if($_POST["btn_warning_brdwidth"]){
-    $customcss .= "        border: ".$_POST["btn_warning_brdwidth"]."px solid ";
+    $customcss .= "        border: ".$_POST["btn_warning_brdwidth"]." solid ";
     if($_POST["btn_warning_brdcolor"]){
         $customcss .= $_POST["btn_warning_brdcolor"];
     }
@@ -561,6 +574,9 @@ $customcss .="
 
 if($_POST["btn_warning_bghover"]){
     $customcss .= "        background: ".$_POST["btn_warning_bghover"].";";
+}
+if($_POST["btn_warning_txthover"]){
+    $customcss .= "        color: ".$_POST["btn_warning_txthover"].";";
 }
 
  $customcss .= "
@@ -598,7 +614,7 @@ if($_POST["btn_danger_txt"]){
 }
 
 if($_POST["btn_danger_brdwidth"]){
-    $customcss .= "        border: ".$_POST["btn_danger_brdwidth"]."px solid ";
+    $customcss .= "        border: ".$_POST["btn_danger_brdwidth"]." solid ";
     if($_POST["btn_danger_brdcolor"]){
         $customcss .= $_POST["btn_danger_brdcolor"];
     }
@@ -618,6 +634,9 @@ $customcss .="
 
 if($_POST["btn_danger_bghover"]){
     $customcss .= "        background: ".$_POST["btn_danger_bghover"].";";
+}
+if($_POST["btn_danger_txthover"]){
+    $customcss .= "        color: ".$_POST["btn_danger_txthover"].";";
 }
 
  $customcss .= "

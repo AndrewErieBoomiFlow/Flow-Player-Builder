@@ -355,6 +355,11 @@
 							    <input type="text" value="" class="form-control" name="btn_default_txt" placeholder="Click Right" />
 							    <span class="input-group-addon"><i></i></span>
 							</div>
+							<label>Default Btn Text Hover</label>
+							<div class="colorpick input-group colorpicker-component">
+							    <input type="text" value="" class="form-control" name="btn_default_txthover" placeholder="Click Right" />
+							    <span class="input-group-addon"><i></i></span>
+							</div>
 							<label>Default Btn Border Color</label>
 							<div class="colorpick input-group colorpicker-component">
 							    <input type="text" value="" class="form-control" name="btn_default_brdcolor" placeholder="Click Right" />
@@ -364,29 +369,22 @@
 								<label>Default Btn Border Width</label>
 								<select class="form-control" name="btn_default_brdwidth">
 									<option></option>
-									<option>0</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
+									<?php 
+										for ($x = 0; $x <= 10; $x++) {
+										    echo "<option>".$x."px</option>";
+										} 
+									?>		
 								</select>
 							</div>
 							<div class="form-group">
 								<label>Default Btn Border Radius</label>
 								<select class="form-control" name="btn_default_brdrad">
 									<option></option>
-									<option>0</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-									<option>7</option>
-									<option>8</option>
-									<option>9</option>
-									<option>10</option>
+									<?php 
+										for ($x = 0; $x <= 10; $x++) {
+										    echo "<option>".$x."px</option>";
+										} 
+									?>		
 								</select>
 							</div>
 						</div>
@@ -407,6 +405,11 @@
 							    <input type="text" value="" class="form-control" name="btn_primary_txt" placeholder="Click Right" />
 							    <span class="input-group-addon"><i></i></span>
 							</div>
+							<label>Primary Btn Text Hover</label>
+							<div class="colorpick input-group colorpicker-component">
+							    <input type="text" value="" class="form-control" name="btn_primary_txthover" placeholder="Click Right" />
+							    <span class="input-group-addon"><i></i></span>
+							</div>
 							<label>Primary Btn Border Color</label>
 							<div class="colorpick input-group colorpicker-component">
 							    <input type="text" value="" class="form-control" name="btn_primary_brdcolor" placeholder="Click Right" />
@@ -416,29 +419,22 @@
 								<label>Primary Btn Border Width</label>
 								<select class="form-control" name="btn_primary_brdwidth">
 									<option></option>
-									<option>0</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
+									<?php 
+										for ($x = 0; $x <= 10; $x++) {
+										    echo "<option>".$x."px</option>";
+										} 
+									?>	
 								</select>
 							</div>
 							<div class="form-group">
 								<label>Primary Btn Border Radius</label>
 								<select class="form-control" name="btn_primary_brdrad">
 									<option></option>
-									<option>0</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-									<option>7</option>
-									<option>8</option>
-									<option>9</option>
-									<option>10</option>
+									<?php 
+										for ($x = 0; $x <= 10; $x++) {
+										    echo "<option>".$x."px</option>";
+										} 
+									?>	
 								</select>
 							</div>
 						</div>
@@ -459,6 +455,11 @@
 							    <input type="text" value="" class="form-control" name="btn_success_txt" placeholder="Click Right" />
 							    <span class="input-group-addon"><i></i></span>
 							</div>
+							<label>Success Btn Text Hover</label>
+							<div class="colorpick input-group colorpicker-component">
+							    <input type="text" value="" class="form-control" name="btn_success_txthover" placeholder="Click Right" />
+							    <span class="input-group-addon"><i></i></span>
+							</div>
 							<label>Success Btn Border Color</label>
 							<div class="colorpick input-group colorpicker-component">
 							    <input type="text" value="" class="form-control" name="btn_success_brdcolor" placeholder="Click Right" />
@@ -468,29 +469,22 @@
 								<label>Success Btn Border Width</label>
 								<select class="form-control" name="btn_success_brdwidth">
 									<option></option>
-									<option>0</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
+									<?php 
+										for ($x = 0; $x <= 10; $x++) {
+										    echo "<option>".$x."px</option>";
+										} 
+									?>	
 								</select>
 							</div>
 							<div class="form-group">
 								<label>Success Btn Border Radius</label>
 								<select class="form-control" name="btn_success_brdrad">
 									<option></option>
-									<option>0</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-									<option>7</option>
-									<option>8</option>
-									<option>9</option>
-									<option>10</option>
+									<?php 
+										for ($x = 0; $x <= 10; $x++) {
+										    echo "<option>".$x."px</option>";
+										} 
+									?>	
 								</select>
 							</div>
 						</div>
@@ -511,6 +505,11 @@
 							    <input type="text" value="" class="form-control" name="btn_info_txt" placeholder="Click Right" />
 							    <span class="input-group-addon"><i></i></span>
 							</div>
+							<label>Info Btn Text Hover</label>
+							<div class="colorpick input-group colorpicker-component">
+							    <input type="text" value="" class="form-control" name="btn_info_txthover" placeholder="Click Right" />
+							    <span class="input-group-addon"><i></i></span>
+							</div>
 							<label>Info Btn Border Color</label>
 							<div class="colorpick input-group colorpicker-component">
 							    <input type="text" value="" class="form-control" name="btn_info_brdcolor" placeholder="Click Right" />
@@ -520,29 +519,22 @@
 								<label>Info Btn Border Width</label>
 								<select class="form-control" name="btn_info_brdwidth">
 									<option></option>
-									<option>0</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
+									<?php 
+										for ($x = 0; $x <= 10; $x++) {
+										    echo "<option>".$x."px</option>";
+										} 
+									?>	
 								</select>
 							</div>
 							<div class="form-group">
 								<label>Info Btn Border Radius</label>
 								<select class="form-control" name="btn_info_brdrad">
 									<option></option>
-									<option>0</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-									<option>7</option>
-									<option>8</option>
-									<option>9</option>
-									<option>10</option>
+									<?php 
+										for ($x = 0; $x <= 10; $x++) {
+										    echo "<option>".$x."px</option>";
+										} 
+									?>	
 								</select>
 							</div>
 						</div>
@@ -563,6 +555,11 @@
 							    <input type="text" value="" class="form-control" name="btn_warning_txt" placeholder="Click Right" />
 							    <span class="input-group-addon"><i></i></span>
 							</div>
+							<label>Warning Btn Text Hover</label>
+							<div class="colorpick input-group colorpicker-component">
+							    <input type="text" value="" class="form-control" name="btn_warning_txthover" placeholder="Click Right" />
+							    <span class="input-group-addon"><i></i></span>
+							</div>
 							<label>Warning Btn Border Color</label>
 							<div class="colorpick input-group colorpicker-component">
 							    <input type="text" value="" class="form-control" name="btn_warning_brdcolor" placeholder="Click Right" />
@@ -572,29 +569,22 @@
 								<label>Warning Btn Border Width</label>
 								<select class="form-control" name="btn_warning_brdwidth">
 									<option></option>
-									<option>0</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
+									<?php 
+										for ($x = 0; $x <= 10; $x++) {
+										    echo "<option>".$x."px</option>";
+										} 
+									?>	
 								</select>
 							</div>
 							<div class="form-group">
 								<label>Warning Btn Border Radius</label>
 								<select class="form-control" name="btn_warning_brdrad">
 									<option></option>
-									<option>0</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-									<option>7</option>
-									<option>8</option>
-									<option>9</option>
-									<option>10</option>
+									<?php 
+										for ($x = 0; $x <= 10; $x++) {
+										    echo "<option>".$x."px</option>";
+										} 
+									?>	
 								</select>
 							</div>
 						</div>
@@ -615,6 +605,11 @@
 							    <input type="text" value="" class="form-control" name="btn_danger_txt" placeholder="Click Right" />
 							    <span class="input-group-addon"><i></i></span>
 							</div>
+							<label>Danger Btn Text Hover</label>
+							<div class="colorpick input-group colorpicker-component">
+							    <input type="text" value="" class="form-control" name="btn_danger_txthover" placeholder="Click Right" />
+							    <span class="input-group-addon"><i></i></span>
+							</div>
 							<label>Danger Btn Border Color</label>
 							<div class="colorpick input-group colorpicker-component">
 							    <input type="text" value="" class="form-control" name="btn_danger_brdcolor" placeholder="Click Right" />
@@ -624,29 +619,22 @@
 								<label>Danger Btn Border Width</label>
 								<select class="form-control" name="btn_danger_brdwidth">
 									<option></option>
-									<option>0</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
+									<?php 
+										for ($x = 0; $x <= 10; $x++) {
+										    echo "<option>".$x."px</option>";
+										} 
+									?>	
 								</select>
 							</div>
 							<div class="form-group">
 								<label>danger Btn Border Radius</label>
 								<select class="form-control" name="btn_danger_brdrad">
 									<option></option>
-									<option>0</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-									<option>7</option>
-									<option>8</option>
-									<option>9</option>
-									<option>10</option>
+									<?php 
+										for ($x = 0; $x <= 10; $x++) {
+										    echo "<option>".$x."px</option>";
+										} 
+									?>	
 								</select>
 							</div>
 						</div>
