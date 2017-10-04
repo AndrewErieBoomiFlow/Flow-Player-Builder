@@ -58,6 +58,14 @@ label {
     margin-bottom: 25px;
 }
 
+.big-labels label{
+    font-size:14px;
+}
+
+.hr-sm{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 /****************/
 /* Nav 			*/

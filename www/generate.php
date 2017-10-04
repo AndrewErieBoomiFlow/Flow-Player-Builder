@@ -40,6 +40,15 @@ if($_POST["player_iswizard"]){
 	$iswizard = "false";
 }
 
+//is colab
+if($_POST["player_iscolab"]){
+    $iscolab = "true";
+} else {
+    $iscolab = "false";
+}
+
+
+
 //theme
 if($_POST["player_theme"] == "default"){
 	$theme = "queryParameters['theme']";
@@ -73,7 +82,7 @@ $scriptOut =
                 reportingMode: queryParameters['reporting-mode'],
                 replaceUrl: ".$replaceURL.",
                 collaboration: {
-                    isEnabled: false
+                    isEnabled: ".$iscolab."
                 },
                 inputs: null,
                 annotations: null,
@@ -110,10 +119,26 @@ $scriptOut =
 </script>
 ";
 
+if($_POST["player_navlogo"]){
+    $customnavlogo = "<style>". PHP_EOL;
+    $customnavlogo .=
+    "    .mw-bs .navbar .navbar-brand:before {
+    ";
+
+    if($_POST["player_navlogo"]){
+        $customnavlogo .= "   content: url( ".$_POST["player_navlogo"].");";
+    }
+
+    $customnavlogo .=
+    "
+    }
+</style>
+    ";
+}
+
+
+
 $customcss = "<style>". PHP_EOL;
-
-
-
 
 ///////////////////////////
 // General Overides
@@ -197,7 +222,6 @@ if($_POST["general_h5size"]){
 }
 
 
-
 ///////////////////////////
 // Nav Overides
 ///////////////////////////
@@ -215,8 +239,7 @@ if($_POST["nav_bg"]){
     $customcss .= "        background: ".$_POST["nav_bg"].";";
 }
 
-$customcss .=
-"
+$customcss .= "
     }
 
     .mw-bs .navbar-default .navbar-nav>li>a {
@@ -669,17 +692,30 @@ $customcss .= "</style>". PHP_EOL;
 	$mainloader = '<script src="https://assets.manywho.com/js/loader.min.js"></script>';
 	$customcssfile = $_POST["player_customcssfile"];
     $custompastecss = $_POST["player_pastecss"];
+    $ptitle = htmlspecialchars($_POST["player_title"]);
+    
+    if(!$ptitle){
+        $ptitle = "Boomi Flow";
+    }
 
 	$playerOut = "";
 	$playerOut .= file_get_contents($p_open);
-	$playerOut .= "<title>".htmlspecialchars($_POST["player_title"])."</title>". PHP_EOL;
+	$playerOut .= "<title>".$ptitle."</title>". PHP_EOL;
 	$playerOut .= '  <link rel="icon" href="'.htmlspecialchars($_POST["player_favicon"]).'">'. PHP_EOL;
 	$playerOut .= file_get_contents($loadtheme);
 	$playerOut .= $jquery. PHP_EOL;
 	$playerOut .= $scriptOut;
 	$playerOut .= $customStyles;
 	$playerOut .= $mainloader. PHP_EOL;
-    $playerOut .= $customcss. PHP_EOL;
+
+     
+
+    if($customnavlogo){
+        $playerOut .= $customnavlogo. PHP_EOL;
+    }
+    if($_POST["settings_advanced"]){
+        $playerOut .= $customcss. PHP_EOL;
+    }
 
     //Paste CSS
     if($custompastecss){
